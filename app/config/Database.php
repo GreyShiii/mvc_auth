@@ -1,0 +1,22 @@
+<?php
+namespace App\Config;
+use PDO;
+use PDOException; 
+
+class Database {
+    private static $host = "localhost";
+    private static $dbname = "auth_crud";
+    private static $username = "root";
+    private static $password = "grey";
+
+    public static function connect() {
+        try {
+        $conn = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8mb4", self::$username, self::$password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $conn;
+        } catch (PDOException $e) {
+            die("Database error: " . $e->getMessage());
+        }
+    }
+}
+?>
