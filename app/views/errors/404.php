@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>404 not found</h1>
-    <a href="">Go back</a>
+    <a href="/OOP(PHP)/crudAUTH1/public/dashboard">Go back</a>
 </body>
 </html>
