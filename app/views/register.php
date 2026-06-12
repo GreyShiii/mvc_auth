@@ -7,12 +7,17 @@
 </head>
 <body>
     <h2>Register</h2>
-    <form action="/OOP(PHP)/crudAUTH1/public/register" method="POST">
+    <?php $error = \Core\Auth::getFlash('error'); ?>
+    <?php if($error): ?>
+        <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+    <?php endif; ?>
+    
+    <form action="/OOP(PHP)/mvcAUTH/public/register" method="POST">
         <input type="text" name="username" placeholder="Username" required><br>
         <input type="email" name="email" placeholder="Email" required><br>
         <input type="password" name="password" placeholder="Password" required><br>
         <button type="submit">Register</button>
-        <p>Already have an account? <a href="/OOP(PHP)/crudAUTH1/public/login">Login</a> here</p>
+        <p>Already have an account? <a href="/OOP(PHP)/mvcAUTH/public/login">Login</a> here</p>
     </form>
 </body>
 </html>

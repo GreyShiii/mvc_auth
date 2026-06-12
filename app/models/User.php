@@ -25,5 +25,11 @@ class User {
         $stmt->execute([':email' => $email]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function findByUsername(string $username) {
+        $stmt = $this->db->prepare("SELECT * FROM {$this->table} WHERE username = :username");
+        $stmt->execute([':username' => $username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>

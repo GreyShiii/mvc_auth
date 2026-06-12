@@ -9,6 +9,6 @@
 <body>
     <h1>Dashboard</h1>
     <h3>Welcome, <?php echo htmlspecialchars($username); ?></h3>
-    <a href="/OOP(PHP)/crudAUTH1/public/logout">Logout</a>
+    <a href="/OOP(PHP)/mvcAUTH/public/logout">Logout</a>
 </body>
 </html>

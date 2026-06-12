@@ -2,8 +2,8 @@
 session_start();
 
 if (isset($_SESSION['user_id'])) {
-    header("Location: /OOP(PHP)/crudAUTH1/public/dashboard");
+    header("Location: /OOP(PHP)/mvcAUTH/public/dashboard");
 } else {
-    header("Location: /OOP(PHP)/crudAUTH1/public/login");
+    header("Location: /OOP(PHP)/mvcAUTH/public/login");
 }
 ?>
